@@ -6,7 +6,10 @@
 
 package cr.una.taskapp.backend.dao;
 
+import cr.una.taskapp.backend.model.Priority;
+import cr.una.taskapp.backend.model.Status;
 import cr.una.taskapp.backend.model.Task;
+import org.joda.time.DateTime;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +18,10 @@ import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Unit Test Class
@@ -35,10 +41,71 @@ public class TaskDaoTest {
     @Autowired
     private ITaskDao taskDao;
 
+    @Autowired
+    private IPriorityDao priorityDao;
+
     @Test
     public void testFindById() {
         Task task = taskDao.findById(1);
 
         assertEquals(task.getTitle().toString(), "Evaluate Students");
+    }
+
+    @Test
+    public void testFindAll() {
+        List<Task> taskList = taskDao.findAll();
+
+        assertTrue(taskList.size() == 2);
+    }
+
+    @Test
+    public void testCreate() {
+        DateTime dt = new DateTime();
+        Task task = new Task();
+        Status status = new Status();
+
+        status.setIdStatus(1L);
+
+        task.setIdTask(3L);
+        task.setTitle("Test Task");
+        task.setNotes("Some notes");
+        task.setCreateDate(dt.toDate());
+        task.setDueDate(dt.toDate());
+
+        task.setPriority(priorityDao.findById(1));
+        task.setStatus(status);
+
+        taskDao.create(task);
+
+        assertEquals(task.getIdTask(), Long.valueOf(3));
+    }
+
+    @Test
+    public void testUpdate() {
+        DateTime dt = new DateTime();
+        Task task = taskDao.findById(1);
+
+        task.setTitle("Test Update");
+
+        taskDao.update(task);
+        assertEquals(task.getTitle().toString(), "Test Update");
+    }
+
+    @Test
+    public void testDelete() {
+        Task task = taskDao.findById(2);
+
+        taskDao.delete(task);
+
+        task = taskDao.findById(2);
+        assertTrue(task == null);
+    }
+
+    @Test
+    public void testDeleteById() {
+        taskDao.deleteById(2L);
+
+        Task task = taskDao.findById(2);
+        assertTrue(task == null);
     }
 }

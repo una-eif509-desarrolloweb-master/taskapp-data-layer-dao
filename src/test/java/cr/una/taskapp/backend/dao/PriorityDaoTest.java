@@ -75,7 +75,7 @@ public class PriorityDaoTest {
     @Test
     public void testDelete() {
         Priority priorityDeleted = new Priority();
-        priorityDeleted.setIdPriority(new Long(1));
+        priorityDeleted.setIdPriority(1L);
 
         priorityDao.delete(priorityDeleted);
 
