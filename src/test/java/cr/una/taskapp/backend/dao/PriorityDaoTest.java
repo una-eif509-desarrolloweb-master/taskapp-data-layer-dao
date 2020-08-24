@@ -51,19 +51,19 @@ public class PriorityDaoTest {
     public void testCreate() {
         Priority priority = new Priority();
 
-        priority.setIdPriority(new Long(4));
+        priority.setIdPriority(4L);
         priority.setLabel("Trivial");
 
         priorityDao.create(priority);
 
-        assertEquals(priority.getIdPriority(), new Long(4));
+        assertEquals(priority.getIdPriority(), Long.valueOf(4));
     }
 
     @Test
     public void testUpdate() {
         Priority priorityUpdated = new Priority();
 
-        priorityUpdated.setIdPriority(new Long(2));
+        priorityUpdated.setIdPriority(2L);
         priorityUpdated.setLabel("Medium - Updated");
 
         priorityDao.update(priorityUpdated);
@@ -85,7 +85,7 @@ public class PriorityDaoTest {
 
     @Test
     public void testDeleteById() {
-        priorityDao.deleteById(new Long(1));
+        priorityDao.deleteById(1L);
 
         Priority priority = priorityDao.findById(1);
         assertTrue(priority == null);
