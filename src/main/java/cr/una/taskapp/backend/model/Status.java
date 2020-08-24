@@ -1,10 +1,7 @@
 /*
+ * Universidad Nacional de Costa Rica  2020
  *
- *  *
- *  * Universidad Nacional de Costa Rica  2020
- *  *
- *  * mike@guzmanalan.com
- *  *
+ * mike@guzmanalan.com
  *
  */
 

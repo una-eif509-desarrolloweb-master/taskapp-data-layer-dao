@@ -1,3 +1,13 @@
+/*
+ *
+ *
+ * Universidad Nacional de Costa Rica  2020
+ *
+ * mike@guzmanalan.com
+ *
+ *
+ */
+
 package cr.una.taskapp.backend.model;
 
 import lombok.Getter;

@@ -13,10 +13,7 @@ import java.util.List;
  * DAO Priority
  */
 @Repository
-public class PriorityDao implements IPriorityDao {
-
-    @Autowired
-    protected SessionFactory sessionFactory;
+public class PriorityDao extends AbstractHibernateDao implements IPriorityDao {
 
     @Override
     public Priority findById(final long id) { return getCurrentSession().get(Priority.class, id); }
@@ -54,7 +51,4 @@ public class PriorityDao implements IPriorityDao {
         delete(priority);
     }
 
-    protected Session getCurrentSession() {
-        return sessionFactory.getCurrentSession();
-    }
 }
