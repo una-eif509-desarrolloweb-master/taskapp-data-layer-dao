@@ -1,3 +1,13 @@
+/*
+ *
+ *  *
+ *  * Universidad Nacional de Costa Rica  2020
+ *  *
+ *  * mike@guzmanalan.com
+ *  *
+ *
+ */
+
 package cr.una.taskapp.backend.model;
 
 import lombok.Getter;
@@ -7,22 +17,20 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Entity for the priority
+ * Entity for Status
  */
 @Entity
-public class Priority {
-
-    // Properties
+@Table( name = "status" )
+public class Status {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_priority")
+    @Column(name = "id_status")
     @Getter @Setter
-    private Long idPriority;
-    @Column(name = "label")
+    private Long idStatus;
     @Getter @Setter
     private String label;
 
     // Relationship definition
-    @OneToMany(mappedBy = "priority")
+    @OneToMany(mappedBy = "status")
     private List<Task> taskList;
 }
