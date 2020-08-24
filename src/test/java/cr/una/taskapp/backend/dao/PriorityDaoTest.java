@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,6 +16,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @RunWith(SpringRunner.class)
 @Transactional
 @SpringBootTest
+@Sql({
+        "/import-priorities.sql"
+})
 public class PriorityDaoTest {
 
     @Autowired
@@ -22,8 +26,8 @@ public class PriorityDaoTest {
 
     @Test
     public void testFindById() {
-        Priority priority = priorityDao.findById(1);
+        Priority priority = priorityDao.findById(2);
 
-        assertEquals(priority.getLabel().toString(), "High");
+        assertEquals(priority.getLabel().toString(), "Medium");
     }
 }
