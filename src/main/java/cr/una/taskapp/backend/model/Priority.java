@@ -10,6 +10,7 @@ import java.util.List;
  * Entity for the priority
  */
 @Entity
+@Table( name = "priority" )
 public class Priority {
 
     // Properties

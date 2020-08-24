@@ -35,8 +35,10 @@ public class Task {
     @Getter @Setter
     private String notes;
     @Getter @Setter
+    @Temporal(TemporalType.DATE)
     private Date createDate;
     @Getter @Setter
+    @Temporal(TemporalType.DATE)
     private Date dueDate;
 
     // Relationship definition
