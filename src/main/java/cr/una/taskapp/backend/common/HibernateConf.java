@@ -22,9 +22,15 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 import java.util.Properties;
 
+/**
+ * Hibernate Configuration
+ *
+ * This class will be used for define the base configuration of the ORM
+ * using the file persistence-postgres.properties
+ */
 @Configuration
 @EnableTransactionManagement
-@PropertySource({ "classpath:persistance-postgres.properties" })
+@PropertySource({ "classpath:persistence-postgres.properties" })
 public class HibernateConf {
 
     @Autowired
