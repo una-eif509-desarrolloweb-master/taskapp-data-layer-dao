@@ -17,7 +17,8 @@ public class PriorityDao implements IPriorityDao {
 
     @Override
     public Priority findById(final long id) {
-        return getCurrentSession().get(Priority.class, id);
+        Priority priority = getCurrentSession().get(Priority.class, id);
+        return priority;
     }
 
     protected Session getCurrentSession() {

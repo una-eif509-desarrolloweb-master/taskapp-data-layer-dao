@@ -24,7 +24,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@PropertySource({ "classpath:persistence-postgres.properties" })
+@PropertySource({ "classpath:persistance-postgres.properties" })
 public class HibernateConf {
 
     @Autowired
@@ -34,7 +34,7 @@ public class HibernateConf {
     public LocalSessionFactoryBean sessionFactory() {
         final LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[] { "com.akamai.gss.eng.backend.ampboard.model" });
+        sessionFactory.setPackagesToScan(new String[] { "cr.una.taskapp.backend.model" });
         sessionFactory.setHibernateProperties(hibernateProperties());
 
         return sessionFactory;
