@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'cr.una.taskapp'
+group = 'cr.una.taskapp.backend.data'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
