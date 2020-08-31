@@ -22,6 +22,7 @@ public class Privilege {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_privilege")
+    @Getter @Setter
     private Long idPrivilege;
     @Getter @Setter
     private String name;

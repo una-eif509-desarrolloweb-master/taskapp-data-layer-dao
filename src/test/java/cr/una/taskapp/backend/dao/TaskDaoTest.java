@@ -8,6 +8,7 @@ package cr.una.taskapp.backend.dao;
 
 import cr.una.taskapp.backend.model.Status;
 import cr.una.taskapp.backend.model.Task;
+import cr.una.taskapp.backend.model.User;
 import org.joda.time.DateTime;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -63,6 +64,9 @@ public class TaskDaoTest {
         DateTime dt = new DateTime();
         Task task = new Task();
         Status status = new Status();
+        User user = new User();
+
+        user.setIdUser(1L);
 
         status.setIdStatus(1L);
 
@@ -71,6 +75,7 @@ public class TaskDaoTest {
         task.setNotes("Some notes");
         task.setCreateDate(dt.toDate());
         task.setDueDate(dt.toDate());
+        task.setUser(user);
 
         task.setPriority(priorityDao.findById(1));
         task.setStatus(status);
