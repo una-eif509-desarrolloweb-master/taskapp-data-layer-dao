@@ -35,5 +35,6 @@ public class Priority {
 
     // Relationship definition
     @OneToMany(mappedBy = "priority")
+    @Getter @Setter
     private List<Task> taskList;
 }
