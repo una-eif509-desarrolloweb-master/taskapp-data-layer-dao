@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import java.util.Properties;
 
 @SpringBootApplication(exclude= HibernateJpaAutoConfiguration.class)
-public class TaskAppBackendApplication {
+public class TaskAppBackendDataLayerApplication {
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(TaskAppBackendApplication.class);
+        SpringApplication app = new SpringApplication(TaskAppBackendDataLayerApplication.class);
         Properties props = new Properties();
         props.setProperty("server.port", "8083");
 
