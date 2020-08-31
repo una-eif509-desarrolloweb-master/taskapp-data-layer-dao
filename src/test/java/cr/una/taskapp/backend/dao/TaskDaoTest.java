@@ -30,6 +30,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Transactional
 @SpringBootTest
 @Sql({
+        "/import-users.sql",
         "/import-priorities.sql",
         "/import-status.sql",
         "/import-tasks.sql",

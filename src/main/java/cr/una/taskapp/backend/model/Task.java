@@ -49,7 +49,7 @@ public class Task {
     @Getter @Setter
     private Status status;
     @ManyToOne
-    @JoinColumn(name = "id_user")
+    @JoinColumn(name = "id_user", nullable = false)
     @Getter @Setter
     private User user;
 }
