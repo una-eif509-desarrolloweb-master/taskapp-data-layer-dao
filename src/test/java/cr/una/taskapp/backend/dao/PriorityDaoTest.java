@@ -37,7 +37,7 @@ public class PriorityDaoTest {
     public void testFindById() {
         Priority priority = priorityDao.findById(2);
 
-        assertEquals(priority.getLabel().toString(), "Medium");
+        assertEquals(priority.getLabel(), "Medium");
     }
 
     @Test

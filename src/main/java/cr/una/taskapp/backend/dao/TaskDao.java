@@ -7,7 +7,6 @@
 package cr.una.taskapp.backend.dao;
 
 import com.google.common.base.Preconditions;
-import cr.una.taskapp.backend.model.Priority;
 import cr.una.taskapp.backend.model.Task;
 import org.springframework.stereotype.Repository;
 

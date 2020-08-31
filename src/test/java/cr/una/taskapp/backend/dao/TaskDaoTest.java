@@ -6,7 +6,6 @@
 
 package cr.una.taskapp.backend.dao;
 
-import cr.una.taskapp.backend.model.Priority;
 import cr.una.taskapp.backend.model.Status;
 import cr.una.taskapp.backend.model.Task;
 import org.joda.time.DateTime;

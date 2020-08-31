@@ -2,9 +2,6 @@ package cr.una.taskapp.backend.dao;
 
 import com.google.common.base.Preconditions;
 import cr.una.taskapp.backend.model.Priority;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

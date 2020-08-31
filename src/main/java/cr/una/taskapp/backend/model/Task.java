@@ -48,4 +48,8 @@ public class Task {
     @JoinColumn(name = "id_status", nullable = false)
     @Getter @Setter
     private Status status;
+    @ManyToOne
+    @JoinColumn(name = "id_user")
+    @Getter @Setter
+    private User user;
 }
