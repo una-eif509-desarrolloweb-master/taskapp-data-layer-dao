@@ -7,8 +7,7 @@
 
 package cr.una.taskapp.backend.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -18,13 +17,14 @@ import java.util.List;
  */
 @Entity
 @Table( name = "status" )
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Status {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_status")
-    @Getter @Setter
     private Long idStatus;
-    @Getter @Setter
     private String label;
 
     // Relationship definition

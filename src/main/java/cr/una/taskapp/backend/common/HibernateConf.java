@@ -30,7 +30,6 @@ import java.util.Properties;
  */
 @Configuration
 @EnableTransactionManagement
-@PropertySource({ "classpath:persistence-postgres.properties" })
 public class HibernateConf {
 
     @Autowired
@@ -51,9 +50,8 @@ public class HibernateConf {
         final BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
         dataSource.setUrl(env.getProperty("jdbc.url"));
-        //TODO: Update the user and name
-        //dataSource.setUsername(env.getProperty("jdbc.user"));
-        //dataSource.setPassword(env.getProperty("jdbc.pass"));
+        dataSource.setUsername(env.getProperty("jdbc.user"));
+        dataSource.setPassword(env.getProperty("jdbc.pass"));
 
         return dataSource;
     }

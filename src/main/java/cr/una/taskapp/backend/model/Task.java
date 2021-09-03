@@ -8,8 +8,7 @@
 
 package cr.una.taskapp.backend.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -19,23 +18,20 @@ import java.util.Date;
  */
 @Entity
 @Table( name = "task" )
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Task {
 
     // Properties
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_task")
-    @Getter
-    @Setter
     private Long idTask;
-    @Getter @Setter
     private String title;
-    @Getter @Setter
     private String notes;
-    @Getter @Setter
     @Temporal(TemporalType.DATE)
     private Date createDate;
-    @Getter @Setter
     @Temporal(TemporalType.DATE)
     private Date dueDate;
 

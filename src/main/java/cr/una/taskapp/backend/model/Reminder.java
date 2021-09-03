@@ -10,8 +10,7 @@
 
 package cr.una.taskapp.backend.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -22,13 +21,14 @@ import java.util.List;
  */
 @Entity
 @Table( name = "reminder" )
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Reminder {
 
     // Properties
     @Id
-    @Getter @Setter
     private Long idReminder;
-    @Getter @Setter
     @Column(name = "reminder_date")
     private Date reminderDate;
 

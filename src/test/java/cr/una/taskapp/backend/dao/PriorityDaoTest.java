@@ -2,12 +2,10 @@ package cr.una.taskapp.backend.dao;
 
 
 import cr.una.taskapp.backend.model.Priority;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -19,7 +17,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * Unit Test Class
  * Priority DAO
  */
-@RunWith(SpringRunner.class)
 @Transactional
 @SpringBootTest
 @Sql({

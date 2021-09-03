@@ -6,8 +6,7 @@
 
 package cr.una.taskapp.backend.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -18,26 +17,21 @@ import java.util.List;
  */
 @Entity
 @Table( name = "users" )
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     // Properties
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_user")
-    @Getter @Setter
     private Long idUser;
-    @Getter @Setter
     private String firstName;
-    @Getter @Setter
     private String lastName;
-    @Getter @Setter
     private String password;
-    @Getter @Setter
     private String email;
-    @Getter @Setter
     private Date createDate;
-    @Getter @Setter
     private boolean enabled;
-    @Getter @Setter
     private boolean tokenExpired;
 
     // Relationship definition

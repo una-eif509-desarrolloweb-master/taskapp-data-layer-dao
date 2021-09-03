@@ -10,8 +10,7 @@ import cr.una.taskapp.backend.model.Status;
 import cr.una.taskapp.backend.model.Task;
 import cr.una.taskapp.backend.model.User;
 import org.joda.time.DateTime;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
@@ -27,7 +26,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * Unit Test Class
  * Task DAO
  */
-@RunWith(SpringRunner.class)
 @Transactional
 @SpringBootTest
 @Sql({

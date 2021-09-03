@@ -10,8 +10,7 @@
 
 package cr.una.taskapp.backend.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -21,20 +20,20 @@ import java.util.List;
  */
 @Entity
 @Table( name = "priority" )
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Priority {
 
     // Properties
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_priority")
-    @Getter @Setter
     private Long idPriority;
     @Column(name = "label")
-    @Getter @Setter
     private String label;
 
     // Relationship definition
     @OneToMany(mappedBy = "priority")
-    @Getter @Setter
     private List<Task> taskList;
 }
