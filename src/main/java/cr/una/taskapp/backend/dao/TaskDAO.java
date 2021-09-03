@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * DAO Task
  */
-public interface TaskDao {
+public interface TaskDAO {
     /**
      * Method to find the entity by id
      * @param id the id of the entity to find

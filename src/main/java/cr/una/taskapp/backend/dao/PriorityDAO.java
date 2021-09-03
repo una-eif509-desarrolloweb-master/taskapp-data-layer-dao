@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * DAO Priority
  */
-public interface PriorityDao {
+public interface PriorityDAO {
     public Priority findById (final long id);
     public List<Priority> findAll();
     public Priority create (final Priority priority);

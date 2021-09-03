@@ -16,7 +16,7 @@ import java.util.List;
  * DAO Task
  */
 @Repository
-public class AbstractTaskDao extends AbstractHibernateDao implements TaskDao {
+public class AbstractTaskDAO extends AbstractHibernateDAO implements TaskDAO {
 
     /**
      * Method to find the entity by id

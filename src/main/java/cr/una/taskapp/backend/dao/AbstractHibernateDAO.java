@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * Abstract base DAO
  */
-public class AbstractHibernateDao {
+public class AbstractHibernateDAO {
 
     /**
      * The sessionFactory of Hibernate

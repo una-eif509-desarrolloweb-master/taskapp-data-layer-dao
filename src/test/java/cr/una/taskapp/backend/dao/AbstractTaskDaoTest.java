@@ -37,10 +37,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class AbstractTaskDaoTest {
 
     @Autowired
-    private TaskDao taskDao;
+    private TaskDAO taskDao;
 
     @Autowired
-    private PriorityDao priorityDao;
+    private PriorityDAO priorityDao;
 
     @Test
     public void testFindById() {

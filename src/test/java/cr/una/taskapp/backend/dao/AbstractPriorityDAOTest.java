@@ -25,10 +25,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 // TODO: This code is to persist the information in the database
 // @Sql(scripts = {"/import-priorities.sql"},
 //        config = @SqlConfig(encoding = "utf-8", transactionMode = SqlConfig.TransactionMode.ISOLATED))
-public class AbstractPriorityDaoTest {
+public class AbstractPriorityDAOTest {
 
     @Autowired
-    private PriorityDao priorityDao;
+    private PriorityDAO priorityDao;
 
     @Test
     public void testFindById() {

@@ -10,7 +10,7 @@ import java.util.List;
  * DAO Priority
  */
 @Repository
-public class AbstractPriorityDao extends AbstractHibernateDao implements PriorityDao {
+public class AbstractPriorityDAO extends AbstractHibernateDAO implements PriorityDAO {
 
     @Override
     public Priority findById(final long id) { return getCurrentSession().get(Priority.class, id); }
