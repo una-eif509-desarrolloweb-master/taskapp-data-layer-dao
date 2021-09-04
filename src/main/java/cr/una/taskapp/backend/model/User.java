@@ -43,6 +43,5 @@ public class User {
             name = "user_role",
             joinColumns = @JoinColumn(name = "id_user"),
             inverseJoinColumns = @JoinColumn(name = "id_role"))
-    @Getter @Setter
     private List<Role> roleList;
 }

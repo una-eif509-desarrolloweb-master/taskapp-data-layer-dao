@@ -38,14 +38,13 @@ public class Task {
     // Relationship definition
     @ManyToOne
     @JoinColumn(name = "id_priority", nullable = false)
-    @Getter @Setter
     private Priority priority;
+
     @ManyToOne
     @JoinColumn(name = "id_status", nullable = false)
-    @Getter @Setter
     private Status status;
+
     @ManyToOne
     @JoinColumn(name = "id_user", nullable = false)
-    @Getter @Setter
     private User user;
 }
